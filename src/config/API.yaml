@@ -1,0 +1,22 @@
+fmp_api_info:
+  api_key : 5bf18e07758659d4c96dc8e50005a0b7
+  api_name : Financial Modeling Prep
+  api_link : https://financialmodelingprep.com/developer
+
+polygon_api_info:
+  api_key: UyTbs9gJxwqz8usJAbGe5EpbXptclz2g
+  api_name: polygon.io
+  api_link: https://polygon.io/docs/getting-started
+
+finnhub_api_info:
+  api_key: c2r5q5aad3iets16gne0
+  api_name: finnhub.io
+  api_link: https://finnhub.io/docs/api
+
+
+country_exchanges:
+  US: ["New York Stock Exchange", "NASDAQ"]
+  India: ["NSE"]
+
+
+
