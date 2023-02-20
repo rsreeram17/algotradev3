@@ -59,7 +59,7 @@ class FMP(object):
         else:
             raise FMPException('Interval value is not valid', FMP.get_historical_chart.__name__)
 
-    def get_historical_chart_index(self,interval, symbol):
+    def get_historical_chart_index(self, interval, symbol):
         return FMP.get_historical_chart(self, interval, str(INDEX_PREFIX)+symbol)
 
     @FMPDecorator.write_to_file

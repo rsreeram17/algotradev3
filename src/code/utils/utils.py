@@ -17,6 +17,16 @@ def create_date_chunks(start_date: str,
                        end_date: str,
                        chunk_length: int):
 
+    """
+
+    :param start_date:
+    :param end_date:
+    :param chunk_length:
+    :return:
+    """
+
+
+
     start_date = datetime.strptime(start_date, '%Y-%m-%d')
     end_date = datetime.strptime(end_date, '%Y-%m-%d')
 
@@ -85,14 +95,15 @@ def write_data(dataframe: pd.DataFrame,
         dataframe.to_csv(filename)
 
 
-def read_data(dataframe: pd.DataFrame,
-              filename,
+def read_data(filename,
               format: str):
     if format == "ftr":
-        pd.read_feather(filename)
+        data = pd.read_feather(filename)
     elif format == "csv":
-        pd.read_csv(filename)
-        
+        data = pd.read_csv(filename)
+    else:
+        data = None
+    return data
 
 
 

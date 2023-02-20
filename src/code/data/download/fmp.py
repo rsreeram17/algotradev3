@@ -7,6 +7,7 @@ from tqdm import tqdm
 from multiprocessing import Pool
 import time
 
+
 class FMPDownloader(BaseDownloader):
 
     def __init__(self,
@@ -57,13 +58,13 @@ if __name__ == "__main__":
     start_date = "2005-01-01"
     end_date = "2005-12-31"
 
-    dates = [("{}-01-01".format(year), "{}-12-31".format(year)) for year in range(2012, 2022)]
-    #dates = [("2010-01-01", "2010-12-31")]
+    #dates = [("{}-01-01".format(year), "{}-12-31".format(year)) for year in range(2012, 2017)]
+    dates = [("2020-01-01", "2020-12-31")]
 
-    ticker_list = ["TSLA", "AMD", "SBUX"]
+    ticker_list = ["AAPL"]
 
     for start_date, end_date in dates:
-        date_chunks = create_date_chunks(start_date, end_date, 8)
+        date_chunks = create_date_chunks(start_date, end_date, 45)
         with Pool() as pool:
             items = [(ticker_list, y[0], y[-1]) for y in date_chunks]
             pool.starmap(fmp_downloader.download_historical_price, items)

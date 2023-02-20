@@ -1,9 +1,10 @@
 data: D:\Stuff\Trading\Algos\algotradev3\data
 input: input\
+features: features\
 output: output\
 FMP_company_details: input\FMP_API_data\company_details\
 process_daily_price: output\FMP_API_data\daily_price\
-features: output\features\
+
 model_data: output\model_data\
 cache: cache\
 
